@@ -1,31 +1,22 @@
 import React, {useState} from "react";
 import {
   ChakraProvider,
-  Box,
   Text,
   Stack,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
   Heading,
   Image,
-  StackDivider,
 } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
-import { Center, Square, Circle } from "@chakra-ui/react";
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
+import { Button} from "@chakra-ui/react";
+import { Center} from "@chakra-ui/react";
+import { Card, CardBody } from "@chakra-ui/react";
 import { Divider } from "@chakra-ui/react";
 
 function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
   const [isLoad, setIsLoad] = useState(false);
-  function containsOnlyNumbers(str) {
-    return /^[0-9]+$/.test(str);
-  }
+  
   function containsNumbers(str) {
     return /\d/.test(str);
   }
