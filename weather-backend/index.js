@@ -23,7 +23,6 @@ app.get('/', (req, res) => {
 app.get('/weather/:location', async (req, res) => {
      // fetches weather data from openweathermap.org
     const location = req.params.location;
-    const apiKey = "f375a208c4a71fd0ecac74723ad94d27";
     console.log(location);
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.API_KEY}&units=metric`;
     const response = fetch(url, {
