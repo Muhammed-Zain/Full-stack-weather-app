@@ -31,7 +31,7 @@ function App() {
       return;
     }
     setIsLoad(true);
-    const url = `http://localhost:5000/weather/${city}`;
+    const url = `https://weather-app-gnhe.onrender.com/weather/${city}`;
     const res = await fetch(url);
     if(!res.ok){
       alert("Enter a Valid City Name")
